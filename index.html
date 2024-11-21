@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MIAMOR</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Audio que se reproducirá cuando se pase el mouse sobre la tarjeta -->
+<audio id="audio" preload="auto">
+  <source src="/resources/Cumple.mp3" type="audio/mp3">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+<div class="card" 
+     onmouseover="playAudio()" 
+     onmouseout="stopAudio()">
+    <div class="imgBox">
+        <div class="bark"></div>
+        <img src="/resources/WhatsApp Image 2024-11-20 at 7.21.45 PM.jpeg">
+    </div>
+    <div class="details">
+        <h4 class="color1">FELIZ CUMPLEAÑOS MI AMOR!</h4>
+        <h4 class="color2 margin">Te amo mucho</h4>
+        <p>Me hace tan feliz verte crecer.</p>
+        <p>Nunca pensé que llegaría a tener</p>
+        <p>a alguien tan valiosa en mi vida.</p>
+        <p></p>
+        <p>Lamento si no te he amado de la manera</p>
+        <p>correcta, pero te juro que mejoraré para</p>
+        <p>hacerte sentir todo lo bonito que mereces</p>
+        <p>mi amor :)</p>
+        <p class="text-right">Happy Birthday</p>
+        <p class="text-right">♥ Te Desea Tu Esposo</p>
+    </div>
+</div>
+
+<script>
+  // Función que se llama cuando el mouse pasa sobre la tarjeta
+  function playAudio() {
+    var audio = document.getElementById("audio");
+    audio.play(); // Reproduce el audio
+  }
+
+  // Función que se llama cuando el mouse sale de la tarjeta
+  function stopAudio() {
+    var audio = document.getElementById("audio");
+    audio.pause();  // Detiene el audio
+    audio.currentTime = 0;  // Reinicia el audio a su inicio
+  }
+</script>
+
+</body>
+</html>
